@@ -1,0 +1,15 @@
+---
+title: "Syllabus"
+---
+
+## Download Syllabus
+
+[Download the full syllabus (PDF)](files/vtpeh-6105-syllabus.pdf)
+
+---
+
+## Grading
+
+- Homework: 40%
+- Project: 40%
+- Participation: 20%

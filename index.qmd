@@ -1,0 +1,25 @@
+---
+title: "Course Information"
+---
+
+# VTPEH 6105: Biostatistics for Health Sciences
+
+Welcome to the course website. Use the sidebar to access the syllabus and class schedule.
+
+## Course Description
+
+Write your course description here. For example:
+
+- Introduce core biostatistics concepts
+- Learn R for data analysis
+- Apply methods to real public health datasets
+
+## Regular Weekly Schedule
+
+| Item        | Details                         |
+|------------|----------------------------------|
+| Lectures   | Fridays (Friday, 11:15-01:45 PM (one 2h30 session))              |
+| Term       | Spring Semester                  |
+| Workload   | 14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week   |
+| Workload   | 14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week   |
+| Location LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas   |
