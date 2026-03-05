@@ -1,0 +1,17 @@
+---
+title: "VTPEH 6270 Workshops"
+---
+
+# Workshops – VTPEH 6270
+
+Use this page for workshop materials and links.
+
+## Workshop 1
+- Topic:
+- Slides:
+- R scripts / data:
+
+## Workshop 2
+- Topic:
+- Slides:
+- R scripts / data:

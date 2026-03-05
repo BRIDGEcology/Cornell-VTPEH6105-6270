@@ -3,17 +3,27 @@ project:
   output-dir: docs
 
 website:
-  title: "Biostatistics for Health Sciences - VTPEH 6105"
+  title: "Biostatistics for Health Sciences - VTPEH 6105 / 6270"
   sidebar:
     style: "docked"
     search: true
     contents:
-      - text: "Course Information"
-        href: index.qmd
-      - text: "Syllabus"
-        href: syllabus.qmd
-      - text: "Class Schedule"
-        href: schedule.qmd
+      - section: "VTPEH 6105"
+        contents:
+          - text: "Course Information"
+            href: index.qmd
+          - text: "Syllabus"
+            href: syllabus.qmd
+          - text: "Class Schedule"
+            href: schedule.qmd
+      - section: "VTPEH 6270"
+        contents:
+          - text: "Overview"
+            href: 6270/index.qmd
+          - text: "Assignments"
+            href: 6270/assignments.qmd
+          - text: "Workshops"
+            href: 6270/workshops.qmd
 
 format:
   html:

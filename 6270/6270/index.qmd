@@ -1,0 +1,25 @@
+---
+title: "VTPEH 6270: [Course Title Here]"
+---
+
+# VTPEH 6270: [Course Title Here]
+
+Welcome to the VTPEH 6270 course page.
+
+Use the sidebar to find information on lectures, assignments, and workshops.
+
+## Course Description
+
+Write the description for 6270 here. For example:
+
+- Learn advanced methods in XYZ
+- Apply concepts to real public health problems
+- Work on team projects and workshops
+
+## Regular Weekly Schedule
+
+| Item        | Details                               |
+|------------|----------------------------------------|
+| Lectures   | Day + Time + Room                     |
+| Term       | Fall                         |
+| Workload   | X hours per week (homework, reading)  |
