@@ -2,8 +2,6 @@
 title: "VTPEH 6105 Workshops"
 ---
 
-# VTPEH 6105 Workshops
-
 This page lists Workshops 1 through 10 for VTPEH 6105.
 
 ## Workshop 01
