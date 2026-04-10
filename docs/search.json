@@ -1,41 +1,12 @@
 [
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Download the full syllabus (PDF)",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#download-syllabus",
-    "href": "syllabus.html#download-syllabus",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Download the full syllabus (PDF)",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#grading",
-    "href": "syllabus.html#grading",
-    "title": "Syllabus",
-    "section": "Grading",
-    "text": "Grading\n\nHomework: 40%\nProject: 40%\nParticipation: 20%",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Course Information",
     "section": "",
     "text": "Welcome to the course website. Use the sidebar to access the syllabus and class schedule.\n\n\nWrite your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets\n\n\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nFridays (Friday, 11:15-01:45 PM (one 2h30 session))\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nLocation LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
     "crumbs": [
+      "VTPEH 6105",
       "Course Information"
     ]
   },
@@ -46,6 +17,7 @@
     "section": "",
     "text": "Write your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets",
     "crumbs": [
+      "VTPEH 6105",
       "Course Information"
     ]
   },
@@ -56,6 +28,172 @@
     "section": "",
     "text": "Item\nDetails\n\n\n\n\nLectures\nFridays (Friday, 11:15-01:45 PM (one 2h30 session))\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nLocation LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
     "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#week-1",
+    "href": "index.html#week-1",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Topic: Introduction and course overview\nReading: Chapter 1",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#week-2",
+    "href": "index.html#week-2",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Topic: Probability review\nReading: Chapter 2",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#week-3",
+    "href": "index.html#week-3",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Topic: Random variables and distributions\nReading: Chapter 3",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#download-syllabus",
+    "href": "index.html#download-syllabus",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Download the full syllabus (PDF)",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#grading",
+    "href": "index.html#grading",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Homework: 40%\nProject: 40%\nParticipation: 20%",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-01",
+    "href": "index.html#workshop-01",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 01",
+    "text": "Workshop 01\nWorkshop 01 - R Bootcamp Part I",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-02",
+    "href": "index.html#workshop-02",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 02",
+    "text": "Workshop 02\nWorkshop 02 - R Bootcamp Part II",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-03",
+    "href": "index.html#workshop-03",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 03",
+    "text": "Workshop 03\nWorkshop 03 content has not been added yet.",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-04",
+    "href": "index.html#workshop-04",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 04",
+    "text": "Workshop 04\nWorkshop 04 - Comparison of Means",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-05",
+    "href": "index.html#workshop-05",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 05",
+    "text": "Workshop 05\nWorkshop 05 - Comparison of Means across Multiple Groups (ANOVA)",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-06",
+    "href": "index.html#workshop-06",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 06",
+    "text": "Workshop 06\nWorkshop 06 - Comparison of Prevalences",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-07",
+    "href": "index.html#workshop-07",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 07",
+    "text": "Workshop 07\nWorkshop 07 - Linear Regressions",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-08",
+    "href": "index.html#workshop-08",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 08",
+    "text": "Workshop 08\nWorkshop 08 - Rates and Standardization (DOCX)",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-09",
+    "href": "index.html#workshop-09",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 09",
+    "text": "Workshop 09\nWorkshop 09 - Multivariate Models",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-10",
+    "href": "index.html#workshop-10",
+    "title": "VTPEH 6105 Workshops",
+    "section": "Workshop 10",
+    "text": "Workshop 10\nWorkshop 10 - Logistic Regressions",
+    "crumbs": [
+      "VTPEH 6105",
       "Course Information"
     ]
   },
@@ -66,6 +204,7 @@
     "section": "",
     "text": "Topic: Introduction and course overview\nReading: Chapter 1",
     "crumbs": [
+      "VTPEH 6105",
       "Class Schedule"
     ]
   },
@@ -76,6 +215,7 @@
     "section": "",
     "text": "Topic: Introduction and course overview\nReading: Chapter 1",
     "crumbs": [
+      "VTPEH 6105",
       "Class Schedule"
     ]
   },
@@ -86,6 +226,7 @@
     "section": "Week 2",
     "text": "Week 2\n\nTopic: Probability review\nReading: Chapter 2",
     "crumbs": [
+      "VTPEH 6105",
       "Class Schedule"
     ]
   },
@@ -96,7 +237,118 @@
     "section": "Week 3",
     "text": "Week 3\n\nTopic: Random variables and distributions\nReading: Chapter 3",
     "crumbs": [
+      "VTPEH 6105",
       "Class Schedule"
     ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Download the full syllabus (PDF)",
+    "crumbs": [
+      "VTPEH 6105",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#download-syllabus",
+    "href": "syllabus.html#download-syllabus",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Download the full syllabus (PDF)",
+    "crumbs": [
+      "VTPEH 6105",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grading",
+    "href": "syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\n\nHomework: 40%\nProject: 40%\nParticipation: 20%",
+    "crumbs": [
+      "VTPEH 6105",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "workshops.html",
+    "href": "workshops.html",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "This page lists Workshops 1 through 10 for VTPEH 6105.\n\n\nWorkshop 01 - R Bootcamp Part I\n\n\n\nWorkshop 02 - R Bootcamp Part II\n\n\n\nWorkshop 03 content has not been added yet.\n\n\n\nWorkshop 04 - Comparison of Means\n\n\n\nWorkshop 05 - Comparison of Means across Multiple Groups (ANOVA)\n\n\n\nWorkshop 06 - Comparison of Prevalences\n\n\n\nWorkshop 07 - Linear Regressions\n\n\n\nWorkshop 08 - Rates and Standardization (DOCX)\n\n\n\nWorkshop 09 - Multivariate Models\n\n\n\nWorkshop 10 - Logistic Regressions"
+  },
+  {
+    "objectID": "workshops.html#workshop-01",
+    "href": "workshops.html#workshop-01",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 01 - R Bootcamp Part I"
+  },
+  {
+    "objectID": "workshops.html#workshop-02",
+    "href": "workshops.html#workshop-02",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 02 - R Bootcamp Part II"
+  },
+  {
+    "objectID": "workshops.html#workshop-03",
+    "href": "workshops.html#workshop-03",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 03 content has not been added yet."
+  },
+  {
+    "objectID": "workshops.html#workshop-04",
+    "href": "workshops.html#workshop-04",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 04 - Comparison of Means"
+  },
+  {
+    "objectID": "workshops.html#workshop-05",
+    "href": "workshops.html#workshop-05",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 05 - Comparison of Means across Multiple Groups (ANOVA)"
+  },
+  {
+    "objectID": "workshops.html#workshop-06",
+    "href": "workshops.html#workshop-06",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 06 - Comparison of Prevalences"
+  },
+  {
+    "objectID": "workshops.html#workshop-07",
+    "href": "workshops.html#workshop-07",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 07 - Linear Regressions"
+  },
+  {
+    "objectID": "workshops.html#workshop-08",
+    "href": "workshops.html#workshop-08",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 08 - Rates and Standardization (DOCX)"
+  },
+  {
+    "objectID": "workshops.html#workshop-09",
+    "href": "workshops.html#workshop-09",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 09 - Multivariate Models"
+  },
+  {
+    "objectID": "workshops.html#workshop-10",
+    "href": "workshops.html#workshop-10",
+    "title": "VTPEH 6105 Workshops",
+    "section": "",
+    "text": "Workshop 10 - Logistic Regressions"
   }
 ]

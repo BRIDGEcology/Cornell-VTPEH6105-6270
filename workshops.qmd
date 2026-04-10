@@ -1,0 +1,47 @@
+---
+title: "VTPEH 6105 Workshops"
+---
+
+# VTPEH 6105 Workshops
+
+This page lists Workshops 1 through 10 for VTPEH 6105.
+
+## Workshop 01
+
+[Workshop 01 - R Bootcamp Part I](Classes-selected%20(1)/01-23%20-%20Workshop%2001%20-%20R%20Bootcamp%20Part%20I/VTPEH6105-WS01-R-Bootcamp-Part-I.html)
+
+## Workshop 02
+
+[Workshop 02 - R Bootcamp Part II](Classes-selected%20(1)/01-30%20-%20Workshop%2002%20-%20R%20Bootcamp%20Part%20II/VTPEH6105-WS02-R-Bootcamp-Part-II.html)
+
+## Workshop 03
+
+Workshop 03 content has not been added yet.
+
+## Workshop 04
+
+[Workshop 04 - Comparison of Means](Classes-selected%20(1)/02-13%20-%20Workshop%2004%20-%20Comparison%20of%20Means/VTPEH6105-WS04-Mean-Comparison.html)
+
+## Workshop 05
+
+[Workshop 05 - Comparison of Means across Multiple Groups (ANOVA)](02-20%20-%20Workshop%2005%20-%20Comparison%20of%20Means%20across%20Multiple%20Groups/VTPEH6105-WS05-ANOVAs.html)
+
+## Workshop 06
+
+[Workshop 06 - Comparison of Prevalences](02-27%20-%20Workshop%2006%20-%20Comparison%20of%20Prevalences/VTPEH6105-WS06-Comparison-of-Prevalences.html)
+
+## Workshop 07
+
+[Workshop 07 - Linear Regressions](03-06%20-%20Workshop%2007%20-%20Linear%20Regressions/VTPEH6105-WS07-Linear-Regressions.html)
+
+## Workshop 08
+
+[Workshop 08 - Rates and Standardization (DOCX)](03-13%20-%20Workshop%2008%20-%20Rates%20and%20Standardization/VTPEH6105%20-%20Workshop%2008%20-%20Rates%20and%20Standardization.docx)
+
+## Workshop 09
+
+[Workshop 09 - Multivariate Models](03-20%20-%20Workshop%2009%20-%20Multivariate%20Models/VTPEH6105-WS09-Multivariate-Model.html)
+
+## Workshop 10
+
+[Workshop 10 - Logistic Regressions](03-27%20-%20Workshop%2010%20-%20Logistic%20Regressions/VTPEH6105-WS10-Logistic-Regressions.html)
