@@ -1,0 +1,416 @@
+---
+title: "Comparison of Means with R"
+author: "Amandine Gamble"
+date: "`r Sys.Date()`"
+editor_options:
+  chunk_output_type: console
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    number_sections: true
+urlcolor: blue
+---
+
+```{r, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```
+
+```{r setup, results='hide'}
+
+# Packages
+library(ggplot2)
+library(dplyr)
+
+```
+
+# T-test
+
+We will use simulated (fake!) data on daily calorie intake across countries. 
+
+## Question and hypotheses
+
+How does calorie intake varies across countries? Specifically, is calorie intake different between Ireland and Japan?
+
+* **H1**: there is a significant association between calorie intake and country.
+* **H0**: there is **no** significant association between calorie intake and country.
+
+## Data Simulation 
+
+In real life, this would correspond to data collection. Think about how to reach random sampling (i.e. independence of the individuals), how the data should be recorded (continuous, discrete, categorical...) and sample size. 
+
+```{r, results='hide'}
+
+# Set the seed for reproducibility
+set.seed(123)
+
+# Number of observations for each country
+num_ireland <- 1000
+num_japan <- 1000
+
+# Generate calorie intake values for Ireland and Japan
+calories_ireland <- rnorm(num_ireland, mean = 3885, sd = 500)
+calories_japan <- rnorm(num_japan, mean = 2705, sd = 400)
+
+# Create a data_cal frame
+data_cal <- data.frame(
+  country = c(rep("Ireland", num_ireland), rep("Japan", num_japan)),
+  calorie_intake = c(calories_ireland, calories_japan)
+)
+
+# Display the first few rows of the simulated data_calset
+head(data_cal)
+
+```
+
+## Data Exploration
+
+### Figure
+
+```{r, results='hide', fig.cap='Distribution of daily calory intake.'}
+
+# Create a histogram with different colors for each country
+ggplot(data_cal, aes(x = calorie_intake, fill = country)) +
+  geom_histogram(binwidth = 150, position = "dodge", color = "black", alpha = 0.7) +
+  labs(x = "Daily calorie intake (Kcal)",
+       y = "Individual count") +
+  scale_fill_manual(values = c("Ireland" = "#019529", "Japan" = "#BC002D"), name = "Country") +
+  theme_minimal()
+
+```
+
+Visually, calorie intake looks higher in Ireland than in Japan. 
+
+### Summary Statistics
+
+```{r, results='hide'}
+
+mean(data_cal[data_cal$country=="Ireland", "calorie_intake"])
+sd(data_cal[data_cal$country=="Ireland", "calorie_intake"])
+nrow(data_cal[data_cal$country=="Ireland",])
+
+mean(data_cal[data_cal$country=="Japan", "calorie_intake"])
+sd(data_cal[data_cal$country=="Japan", "calorie_intake"])
+nrow(data_cal[data_cal$country=="Japan",])
+
+```
+
+Average (standard deviation) daily calorie intake is 3,893 (496) Kcal in Ireland, and 2,722 (404) in Japan, based on a sample of 1,000 individuals in each country. 
+
+## Statistical Test
+
+### Assumptions
+
+#### Independance 
+
+*Observations from each population are independent of one another*. This is likely the case (would be determined by the study design).
+
+#### Normality
+
+*Data is normally distributed within each group*. This is visible on the histogram. 
+Make sure the data is stratified by group.
+
+```{r, results='hide', fig.cap='Distribution of daily calorie intake (Kcal).'}
+
+# Create a histogram without stratification for comparison
+ggplot(data_cal, aes(x = calorie_intake)) +
+  geom_histogram(binwidth = 150, color = "black", alpha = 0.7) +
+  labs(x = "Daily calorie intake (Kcal)",
+       y = "Individual") +
+  theme_minimal()
+
+```
+
+This can also be assessed with a qqplot, but they are difficult to interpret. 
+
+```{r, results='hide'}
+
+# Create a QQ plot 
+ggplot(data_cal, aes(sample = calorie_intake)) +
+  stat_qq() +
+  labs(title = "Whole data set", 
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles") +
+  theme_minimal()
+
+# Ireland only
+ggplot(subset(data_cal, country == "Ireland"), aes(sample = calorie_intake)) +
+  stat_qq() +
+  labs(title = "Ireland", 
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles") +
+  theme_minimal()
+
+```
+
+This can also be verified with the Shapiro-Wilk test, **for each group**.  
+
+```{r, results='hide'}
+
+# Check normality
+shapiro.test(data_cal[data_cal$country=="Ireland", "calorie_intake"])
+shapiro.test(data_cal[data_cal$country=="Japan", "calorie_intake"])
+
+```
+
+The observed distributions do not statistically differ from a normal distribution. 
+
+#### Homoscedasticity
+
+*Variances are equal across populations*. This is visible on the histogram.
+
+This can also be verified with the variance F test test, **for each group**.
+
+```{r, results='hide'}
+
+# Check homoscedasticity
+var.test(calorie_intake ~ country, data_cal) 
+
+```
+
+The variances are significantly different. However, these tests tend to be very sensitive (strict). I often ignore their output and use the visual assessment instead. 
+
+### Test
+
+```{r, results='hide'}
+
+# Equal variance t-test
+t.test(calorie_intake ~ country, data_cal, var.equal = T)
+
+# Unequal variance t-test (sanity check as the assumption was slightly violated)
+t.test(calorie_intake ~ country, data_cal, var.equal = F)
+
+```
+
+We reject the null hypothesis, i.e., we detect a difference. Output fits with expectations. 
+
+### Explanation
+
+Using a t-test, we detected a significant association between calorie intake and country (t = 57.908, df = 1919.4, p-value < 2.2e-16). Average (standard deviation) daily calorie intake is higher in Ireland - 3,893 (496) Kcal - than Japan 2,722 (404).
+
+```{r, results='hide', fig.cap='Daily calorie intake (Kcal) in Ireland and Japan. Points represents raw data, and diamond and error bars the mean and 95% confidence interval.'}
+
+# Calculate summary statistics
+summary_stats <- data_cal %>%
+  group_by(country) %>%
+  summarise(
+    mean_cal = mean(calorie_intake),
+    sd_cal = sd(calorie_intake),
+    n = n(),
+    se = sd_cal / sqrt(n),
+    ci_lower = mean_cal - qt(0.975, df = n-1) * se,
+    ci_upper = mean_cal + qt(0.975, df = n-1) * se,
+    .groups = 'drop'
+  )
+
+# Create the plot
+ggplot(data_cal, aes(x = country, y = calorie_intake)) +
+  # Raw data points (in background)
+  geom_jitter(alpha = 0.3, width = 0.2, size = 0.8, color = "gray50") +
+  # Mean points
+  geom_point(data = summary_stats, aes(y = mean_cal), 
+             size = 2, color = "black", shape = 18) +
+  # Confidence interval error bars
+  geom_errorbar(data = summary_stats, 
+                aes(y = mean_cal, ymin = ci_lower, ymax = ci_upper),
+                width = 0.1, size = 0.5, color = "black") +
+  # Labels and theme
+  labs(
+    x = "Country",
+    y = "Daily calorie intake (Kcal)",
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 11)
+  )
+
+```
+
+# Wilcoxon Rank Test
+
+A non-parametric test would also work (they almost always work!).
+
+```{r}
+
+# Wilcoxon test
+wilcox.test(calorie_intake ~ country, data_cal)
+
+```
+
+We reach the same conclusion (=
+
+# One-sample t-test
+
+T-tests can also be used to compare one group of observations to a reference value. 
+For instance, let's consider 2,500 Kcal the recommended daily calorie intake. 
+
+```{r}
+
+# Ireland
+t.test(data_cal[data_cal$country=="Ireland", "calorie_intake"], mu = 2500)
+
+```
+
+Ireland daily calorie intake is significantly different from the recommended intake (t = 88.843, df = 999, p-value < 2.2e-16). It is higher.
+
+```{r}
+
+# Japan
+t.test(data_cal[data_cal$country=="Japan", "calorie_intake"], mu = 2500)
+
+```
+
+Japan daily calorie intake is significantly different from the recommended intake (t = 17.381, df = 999, p-value < 2.2e-16). It is higher.
+
+# Activity
+
+Edit the simulation to run the same tests with a sample size of 30 in each group. 
+
+# Paired t-test
+
+We will use simulated (fake!) data on ADHD treatment. 
+
+## Question and hypotheses
+
+Is ADHD score improved after treatment? I.e., is there a difference in ADHD score before and after treatment?
+
+* **H1**: there is a significant association between score and treatment.
+* **H0**: there is **no** significant association between score and treatmenty.
+
+## Data Simulation 
+
+In real life, this would correspond to data collection. Think about how to reach random sampling (i.e. independence of the individuals), how the data should be recorded (continuous, discrete, categorical...) and sample size. 
+
+```{r, results='hide'}
+
+# Set seed for reproducibility
+set.seed(123)
+
+# Number of individuals
+n_individuals <- 30
+
+# Simulate pre-treatment scores
+pre_treatment <- rnorm(n_individuals, mean = 70, sd = 15)
+
+# Simulate post-treatment scores
+post_treatment <- rnorm(n_individuals, mean = 60, sd = 15)
+
+# Combine into a single data frame
+data_adhd <- data.frame(
+  Individual = 1:n_individuals,
+  Pre = pre_treatment,
+  Post = post_treatment
+)
+
+# Display the simulated dataset
+head(data_adhd)
+
+```
+
+## Data Exploration
+
+```{r, results='hide'}
+
+# Reshape data for ggplot
+data_adhd_long <- tidyr::gather(data_adhd, key = "Treatment", value = "Score", -Individual)
+
+```
+
+### Histogram
+
+```{r, results='hide', fig.cap='AHDH scores in individuals pre- and post-treatment. Lines connect observations from a given individual.'}
+
+# Create a histogram with different colors for pre- and post-treatment
+ggplot(data_adhd_long, aes(x = Score, fill = Treatment)) +
+  geom_histogram(position = "identity", alpha = 0.7, bins = 20) +
+  labs(x = "Score",
+       y = "Frequency") +
+  scale_fill_manual(values = c("Pre" = "#65BDBF", "Post" = "#32658A")) +
+  facet_grid(Treatment ~ ., scales = "free_y") +  # Stack facets vertically
+  theme_minimal() + 
+  theme(legend.position = "none")
+
+#ggsave("histo_raw.pdf", width = 4, height = 4)
+
+```
+
+It shows distribution but not how scores from on given individual relate. 
+
+### Scatter plot
+
+```{r, results='hide', fig.cap='AHDH scores in individuals pre- and post-treatment. Lines connect observations from a given individual.'}
+
+# Create a dot plot with connecting lines
+ggplot(data_adhd, aes(x = Individual)) +
+  geom_point(aes(y = Pre), color = "#65BDBF", size = 3) +
+  geom_point(aes(y = Post), color = "#32658A", size = 3) +
+  geom_segment(aes(x = Individual, xend = Individual, y = Pre, yend = Post),
+               color = "gray", linetype = "dashed", size = 0.5) +
+  labs(x = "Individual",
+       y = "Score") +
+  theme_minimal()
+
+#ggsave("connected_dot_plot.pdf", width = 4, height = 4)
+
+```
+
+Visually, nothing is very obvious, but potentially post-treatment scores are lower.
+
+## Statistical Test
+
+### Assumptions
+
+#### Independance 
+
+*Observations from each population are independent of one another*. This is likely the case (would be determined by the study design).
+
+#### Normality
+
+*The within-pair difference is normally distributed*. Here we need to look at the distribution of **the within-pair difference**.
+
+```{r, results='hide'}
+
+# Create new variable
+data_adhd$within_pair_difference = data_adhd$Post - data_adhd$Pre
+
+```
+
+```{r, results='hide'}
+
+# Create a histogram with different colors for pre- and post-treatment
+ggplot(data_adhd, aes(x = within_pair_difference)) +
+  geom_histogram(position = "identity", alpha = 0.7, bins = 20, fill = "#C31230") +
+  labs(x = "Score difference",
+       y = "Frequency") +
+  theme_minimal() 
+
+#ggsave("histo_diff.pdf", width = 4, height = 2)
+
+```
+
+Note that now, the difference looks slightly below 0, so maybe there is a difference between the pre- and post-scores within pairs!
+
+It looks normal enough.
+
+### Test
+
+```{r}
+
+t.test(x = data_adhd$Pre, y = data_adhd$Post, paired = TRUE)
+
+```
+
+We do not reject the null hypothesis, i.e., we do not detect a difference. Output fits with expectations. 
+
+### Explanation
+
+Using a paired t-test, we did not detected any significant effect of treatment on ADHD score. 

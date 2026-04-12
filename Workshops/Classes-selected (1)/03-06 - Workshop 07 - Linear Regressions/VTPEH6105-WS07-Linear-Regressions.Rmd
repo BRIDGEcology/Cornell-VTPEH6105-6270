@@ -1,0 +1,357 @@
+---
+title: "Linear Regression Models with R"
+author: "Amandine Gamble"
+date: "`r Sys.Date()`"
+editor_options:
+  chunk_output_type: console
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    number_sections: true
+urlcolor: blue
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```
+
+# Loading Data
+
+We will use the *Palmer Penguin* data set available directly from the `palmerpenguins` package. You can learn more about the data at [allisonhorst.github.io/palmerpenguins](https://allisonhorst.github.io/palmerpenguins/). 
+
+Today, we will explore the variability in penguin weight, starting by looking at **whether size and weight are associated**.
+
+```{r, results='hide'}
+
+# install.packages("palmerpenguins")
+library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library(car)
+
+dat <- as.data.frame(penguins) # rename dataset
+str(dat) # structure of dataset
+
+```
+
+# Exploring the data
+
+*Which one of the variables included in the data may contribute be associated with weight?*
+
+## Plot
+
+```{r, results='hide'}
+
+ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point()
+
+# Improve readability
+
+ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+# Associations Between Continuous Variables
+
+## Subset
+
+Let's focus on one species and one sex so we can study intra-species and intra-sex but inter-individual variability. 
+
+```{r, results='hide'}
+
+table(dat$sex, dat$species)
+
+dat_gen_f = subset(dat, species == "Gentoo" & sex == "female") 
+
+```
+
+## Re-plot
+
+```{r, results='hide'}
+
+ggplot(dat_gen_f, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+*Add regression line*
+
+```{r, results='hide'}
+
+ggplot(dat_gen_f, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(size = 3, alpha = 0.8) +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+*Does a linear relationship seem reasonable?*
+
+# Statistical Test
+
+## Assumptions
+
+### Independance (all tests)
+
+*Observations from each population are independent of one another*. This is likely the case (would be determined by the study design).
+
+### Normality (Pearson and regression)
+
+Pearson - *Response variable is normally distributed for each value of the explanatory variable*. This is easier to assess on the model residuals (after model fitting), although we can already guess on the scatter plot. 
+
+```{r}
+
+ggplot(dat_gen_f, aes(x = flipper_length_mm)) +
+  geom_histogram() +
+  labs(
+    x = "Flipper Length (mm)"
+  ) +
+  theme_minimal() 
+
+ggplot(dat_gen_f, aes(x = body_mass_g)) +
+  geom_histogram() +
+  labs(
+    x = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+For a linear regression -  Same as above
+
+### Homoscedasticity (regression)
+
+*Variance of the response variable is equal across each value of the explanatory variable*. This is easier to assess on the model residuals (after model fitting), although we can already guess on the scatter plot. .
+
+## Test
+
+* Null hypothesis: there is no association between flipper length and body weight. 
+* Alternative: there is an association between flipper length and body weight (i.e., variations in individual size contributes to explain variations in individual weight).
+
+### Pearson's Correlation Test
+
+Pearson is a parametric test based on the covariance of the two variables. 
+
+```{r}
+
+cor.test(dat_gen_f$flipper_length_mm, dat_gen_f$body_mass_g,
+         method = c("pearson"))
+
+```
+
+Based on Pearson's test, we would reject the null hypothesis. There is a significant association between flipper length and body weight (p < 0.05). The Pearson's correlation coefficient [95% confidence interval] of 0.49 [0.26, 0.66], indicates a positive, but weak association (a lot of the variability remains unexplained). 
+
+As the normality assumption was not obviously verified, we can check that we reach the same conclusion with a non-parametric test. 
+
+### Spearman's Rank Test
+
+Spearman is a non-parametric test based on the variables ranks. 
+
+```{r}
+
+cor.test(dat_gen_f$flipper_length_mm, dat_gen_f$body_mass_g,
+         method = c("spearman"))
+
+```
+
+Based on Spearman's test, we also reject the null hypothesis. There is a significant association between flipper length and body weight (p < 0.05). The Spearman's correlation coefficient of 0.53, indicates a positive, but weak association (a lot of the variability remains unexplained). 
+
+Both tests support the same conclusion: our conclusion is robust to the violation of the normality assumption.  
+
+*Note that this method does not generate an effect size.*
+
+### Linear Regression Model
+
+Linear models are parametric tests. They can be computed through various methods. A common one is the ordinary least square method.  
+
+#### Model Fitting
+
+```{r}
+
+# Fit model 
+mod = lm(body_mass_g ~ flipper_length_mm,
+          data = dat_gen_f)
+
+# Return outputs (including p-value)
+summary(mod)
+
+```
+
+#### Assumption Checks
+
+Before making any conclusion, we need to check the residuals to ensure the assumptions are verified. This is based on the **model residuals**. 
+
+```{r}
+
+plot(mod)
+
+hist(mod$residuals)
+
+shapiro.test(mod$residuals)
+
+ncvTest(mod)
+
+```
+
+The distribution of the residuals supports the normality and homoscedasticity assumptions. 
+
+#### Conclusion
+
+Based on a linear regression, we reject the null hypothesis. There is a significant association between flipper length and body weight (p < 0.05), with an effect size ± standard error of 35 ± 8 (for every additional mm, a penguin is expected to weight 35 more g). The $R^2$ correlation coefficient of 0.24, indicates weak association (a lot of the variability remains unexplained). 
+
+# Associations Between Continuous and Catergorical Variables
+
+## Subset
+
+Let's now focus on one species to look at the association of weight with sex. 
+
+```{r, results='hide'}
+
+dat_gen = subset(dat, species == "Gentoo") 
+
+```
+
+## Re-plot
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = sex, y = body_mass_g, color = sex)) +
+  geom_jitter(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  labs(
+    x = "Sex",
+    y = "Body Mass (g)"
+  ) +
+  scale_x_discrete(labels = c("Female", "Male", "Unknown")) +
+  theme_minimal() 
+
+```
+
+# Statistical Test
+
+We saw before this relationship could be explored with a chi2 or an ANOVA, but they return limited information (notably no effect sizes). We can use linear regressions here too. 
+
+## Assumptions
+
+### Independance
+
+*Observations from each population are independent of one another*. This is likely the case (would be determined by the study design).
+
+### Normality 
+
+For a linear regression - *Response variable is normally distributed for each value of the explanatory variable*. This is easier to assess on the model residuals (after model fitting), although we can already guess on the scatter plot. 
+
+### Homoscedasticity (regression)
+
+*Variance of the response variable is equal across each value of the explanatory variable*. This is easier to assess on the model residuals (after model fitting), although we can already guess on the scatter plot. .
+
+## Test
+
+* Null hypothesis: there is no association between sex and body weight. 
+* Alternative: there is an association between sex and body weight (i.e., variations in individual sex contributes to explain variations in individual weight).
+
+### Linear Regression Model
+
+#### Model Fitting
+
+```{r}
+
+# Fit model 
+mod = lm(body_mass_g ~ sex,
+          data = dat_gen)
+
+# Return outputs (including p-value)
+summary(mod)
+
+```
+
+#### Assumption Checks
+
+Before making any conclusion, we need to check the residuals to ensure the assumptions are verified. This is based on the **model residuals**. 
+
+```{r}
+
+plot(mod)
+
+hist(mod$residuals)
+
+shapiro.test(mod$residuals)
+
+ncvTest(mod)
+
+```
+
+The distribution of the residuals supports the normality and homoscedasticity assumptions. 
+
+#### Conclusion
+
+Based on a linear regression, we reject the null hypothesis. There is a significant association between sex and body weight (p < 0.05), with an effect size ± standard error of 805 ± 55 (males are 805 g heavier than females). The $R^2$ correlation coefficient of 0.65, indicates moderate association (some of the variability remains unexplained).
+
+# Multivariate Models
+
+Several explanatory variables can be included in regression models. 
+
+```{r, results='hide'}
+
+ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+```{r}
+
+# Fit model 
+mod = lm(body_mass_g ~ flipper_length_mm + sex + species,
+          data = dat)
+
+# Return outputs (including p-value)
+summary(mod)
+
+```
+
+We can see that a large part of the variability is now explained! We will talk more about those models in the coming sessions...

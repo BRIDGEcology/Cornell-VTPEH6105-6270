@@ -1,0 +1,263 @@
+---
+title: "Logistic Regression Models with R"
+author: "Amandine Gamble"
+date: "`r Sys.Date()`"
+editor_options:
+  chunk_output_type: console
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    number_sections: true
+urlcolor: blue
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```
+
+# Loading Data
+
+We will use the *Palmer Penguin* data set available directly from the `palmerpenguins` package. You can learn more about the data at [allisonhorst.github.io/palmerpenguins](https://allisonhorst.github.io/palmerpenguins/). 
+
+Today, we will explore whether **biometrics can be used to predict sex**.
+
+```{r, results='hide'}
+
+# install.packages("palmerpenguins")
+library(palmerpenguins)
+library(ggplot2)
+library(car)
+
+dat <- as.data.frame(penguins) # rename dataset
+str(dat) # structure of dataset
+
+```
+
+Let's focus on one species. 
+
+```{r, results='hide'}
+
+dat_gen = subset(dat, species == "Gentoo" & !is.na(sex))
+
+```
+
+# Exploring the data
+
+*Which one of the variables included in the data may contribute be associated with sex?*
+
+## Plot
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = flipper_length_mm, y = body_mass_g, color = sex)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = bill_length_mm, y = bill_depth_mm, color = sex)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Bill Length (mm)",
+    y = "Bill depth (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+# Logistic Regression to Identify Predictors of Sex
+
+## Re-plot
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = flipper_length_mm, y = sex, color = sex)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Sex"
+  ) +
+  theme_minimal() 
+
+```
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = body_mass_g, y = sex, color = sex)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Weight (g)",
+    y = "Sex"
+  ) +
+  theme_minimal() 
+
+```
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = bill_length_mm, y = sex, color = sex)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Bill Length (mm)",
+    y = "Sex"
+  ) +
+  theme_minimal() 
+
+```
+
+```{r, results='hide'}
+
+ggplot(dat_gen, aes(x = bill_depth_mm, y = sex, color = sex)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Bill Depth (mm)",
+    y = "Sex"
+  ) +
+  theme_minimal() 
+
+```
+
+*Does a linear relationship seem reasonable?*
+
+# Statistical Test
+
+## Assumptions
+
+### Independance
+
+*Observations from each population are independent of one another*. This is likely the case (would be determined by the study design).
+
+### Linearity
+
+*Linearity between the response variable odds and the explanatory variables*. Visible from the scatter plots above.
+
+### Absence of Collinearity
+
+*Absence of collinearity between the explanatory variables*. Suspicious from the scatter plots above.
+
+## Model
+
+#### Model Fitting
+
+```{r, results='hide'}
+
+# Fit model 
+mod = glm(sex ~ flipper_length_mm + bill_length_mm + bill_depth_mm + body_mass_g,
+          data = dat_gen, 
+          family = "binomial")
+
+```
+
+#### Additional Assumption Checks
+
+Double checking for the absence of collinearity.
+
+```{r, results='hide'}
+
+# Variance Inflation Factor
+vif(mod)
+
+```
+
+The variance inflation factor is low (< 2) for every variable so we can keep all of them.  
+
+#### Model Selection
+
+```{r, results='hide'}
+
+mod = glm(sex ~ flipper_length_mm,
+          data = dat_gen, 
+          family = "binomial")
+summary(mod)
+
+mod = glm(sex ~ flipper_length_mm + bill_length_mm,
+          data = dat_gen, 
+          family = "binomial")
+summary(mod)
+
+mod = glm(sex ~ flipper_length_mm + bill_length_mm + bill_depth_mm,
+          data = dat_gen, 
+          family = "binomial")
+summary(mod)
+
+mod = glm(sex ~ flipper_length_mm + bill_length_mm + bill_depth_mm + body_mass_g,
+          data = dat_gen, 
+          family = "binomial")
+summary(mod)
+
+```
+
+#### Final Model
+
+```{r, results='hide'}
+
+mod = glm(sex ~ flipper_length_mm + bill_length_mm + bill_depth_mm,
+          data = dat_gen, 
+          family = "binomial")
+summary(mod)
+
+```
+
+#### Coefficient of Determination
+
+```{r, results='hide'}
+
+# Calculate R-squared
+deviance <- summary(mod)$deviance
+null_deviance <- summary(mod)$null.deviance
+rsquared <- 1 - (deviance / null_deviance)
+rsquared
+
+```
+
+Based on a logistic regression with forward selection, we found that, if $p$ is the probability of being a male, we can write:
+
+$\text{logit}(p) = \log(\frac{p}{1-p}) = \beta_0 + \beta_1 * flipper + \beta_2 * bill.length + \beta_3 * bill.depth$
+
+With $\beta_0 (SE) = -111.94 (25.40)$, $\beta_1 (SE) = 0.19 (0.10)$, $\beta_2 (SE) = 0.57 (0.22)$ and $\beta_3 (SE) = 2.94 (0.77)$
+
+The $R^2$ correlation coefficient of 0.70, indicates a moderate predictive power (a lot of the variability remains unexplained). 

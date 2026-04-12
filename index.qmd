@@ -18,8 +18,7 @@ Write your course description here. For example:
 
 | Item        | Details                         |
 |------------|----------------------------------|
-| Lectures   | Fridays (Friday, 11:15-01:45 PM (one 2h30 session))              |
+| Lectures   | Fridays, 11:15-01:45 PM (one 2h30 session) |
 | Term       | Spring Semester                  |
-| Workload   | 14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week   |
-| Workload   | 14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week   |
-| Location LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas   |
+| Workload   | 14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week |
+| Location   | LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas |

@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "6270/**/*.qmd"
+  resources:
+    - Workshops/**
 
 website:
   title: "Biostatistics for Health Sciences - VTPEH 6105 / 6270"
@@ -19,31 +24,31 @@ website:
           - section: "Workshops"
             contents:
               - text: "Workshop 01 - R Bootcamp Part I"
-                href: "Classes-selected (1)/01-23 - Workshop 01 - R Bootcamp Part I/VTPEH6105-WS01-R-Bootcamp-Part-I.html"
+                href: "Workshops/Classes-selected/01-23 - Workshop 01 - R Bootcamp Part I/VTPEH6105-WS01-R-Bootcamp-Part-I.pdf"
               - text: "Workshop 02 - R Bootcamp Part II"
-                href: "Classes-selected (1)/01-30 - Workshop 02 - R Bootcamp Part II/VTPEH6105-WS02-R-Bootcamp-Part-II.html"
+                href: "Workshops/Classes-selected/01-30 - Workshop 02 - R Bootcamp Part II/VTPEH6105-WS02-R-Bootcamp-Part-II.pdf"
               - text: "Workshop 03 - Comparison of Means"
-                href: "Classes-selected (1)/02-13 - Workshop 04 - Comparison of Means/VTPEH6105-WS04-Mean-Comparison.html"
+                href: "Workshops/Classes-selected/02-13 - Workshop 04 - Comparison of Means/VTPEH6105-WS04-Mean-Comparison.pdf"
               - text: "Workshop 04 - Comparison of Means across Multiple Groups (ANOVA)"
-                href: "02-20 - Workshop 05 - Comparison of Means across Multiple Groups/VTPEH6105-WS05-ANOVAs.html"
+                href: "Workshops/Classes-selected (1)/02-20 - Workshop 05 - Comparison of Means across Multiple Groups/VTPEH6105-WS05-ANOVAs.pdf"
               - text: "Workshop 05 - Comparison of Prevalences"
-                href: "02-27 - Workshop 06 - Comparison of Prevalences/VTPEH6105-WS06-Comparison-of-Prevalences.html"
+                href: "Workshops/Classes-selected (1)/02-27 - Workshop 06 - Comparison of Prevalences/VTPEH6105-WS06-Comparison-of-Prevalences.pdf"
               - text: "Workshop 06 - Linear Regressions"
-                href: "03-06 - Workshop 07 - Linear Regressions/VTPEH6105-WS07-Linear-Regressions.html"
+                href: "Workshops/Classes-selected (1)/03-06 - Workshop 07 - Linear Regressions/VTPEH6105-WS07-Linear-Regressions.pdf"
               - text: "Workshop 07 - Rates and Standardization"
-                href: "03-13 - Workshop 08 - Rates and Standardization/VTPEH6105 - Workshop 08 - Rates and Standardization.docx"
+                href: "Workshops/Classes-selected (1)/03-13 - Workshop 08 - Rates and Standardization/VTPEH6105 - Workshop 08 - Rates and Standardization.docx"
               - text: "Workshop 08 - Multivariate Models"
-                href: "03-20 - Workshop 09 - Multivariate Models/VTPEH6105-WS09-Multivariate-Model.html"
+                href: "Workshops/Classes-selected (1)/03-20 - Workshop 09 - Multivariate Models/VTPEH6105-WS09-Multivariate-Model.html"
               - text: "Workshop 09 - Logistic Regressions"
-                href: "03-27 - Workshop 10 - Logistic Regressions/VTPEH6105-WS10-Logistic-Regressions.html"
+                href: "Workshops/Classes-selected (1)/03-27 - Workshop 10 - Logistic Regressions/VTPEH6105-WS10-Logistic-Regressions.html"
       - section: "VTPEH 6270"
         contents:
           - text: "Overview"
-            href: 6270/index.qmd
+            href: 6270/6270/index.qmd
           - text: "Assignments"
-            href: 6270/assignments.qmd
+            href: 6270/6270/6270/assignments.qmd
           - text: "Workshops"
-            href: 6270/workshops.qmd
+            href: 6270/6270/6270/workshops.qmd
 
 format:
   html:

@@ -1,201 +1,73 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Course Information",
-    "section": "",
-    "text": "Welcome to the course website. Use the sidebar to access the syllabus and class schedule.\n\n\nWrite your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets\n\n\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nFridays (Friday, 11:15-01:45 PM (one 2h30 session))\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nLocation LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Course Information",
-    "section": "",
-    "text": "Write your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#regular-weekly-schedule",
-    "href": "index.html#regular-weekly-schedule",
-    "title": "Course Information",
-    "section": "",
-    "text": "Item\nDetails\n\n\n\n\nLectures\nFridays (Friday, 11:15-01:45 PM (one 2h30 session))\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nWorkload\n14 weeks with: - In class lecture and practice sessions: 2h30 per week - Homework: approximately 5 hours per week\n\n\nLocation LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#week-1",
-    "href": "index.html#week-1",
+    "objectID": "workshops.html",
+    "href": "workshops.html",
     "title": "VTPEH 6105 Workshops",
     "section": "",
-    "text": "Topic: Introduction and course overview\nReading: Chapter 1",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "This page lists Workshops 1 through 9 for VTPEH 6105."
   },
   {
-    "objectID": "index.html#week-2",
-    "href": "index.html#week-2",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Topic: Probability review\nReading: Chapter 2",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#week-3",
-    "href": "index.html#week-3",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Topic: Random variables and distributions\nReading: Chapter 3",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#download-syllabus",
-    "href": "index.html#download-syllabus",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Download the full syllabus (PDF)",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#grading",
-    "href": "index.html#grading",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Homework: 40%\nProject: 40%\nParticipation: 20%",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#workshop-01",
-    "href": "index.html#workshop-01",
+    "objectID": "workshops.html#workshop-01",
+    "href": "workshops.html#workshop-01",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 01",
-    "text": "Workshop 01\nWorkshop 01 - R Bootcamp Part I",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 01\nWorkshop 01 - R Bootcamp Part I"
   },
   {
-    "objectID": "index.html#workshop-02",
-    "href": "index.html#workshop-02",
+    "objectID": "workshops.html#workshop-02",
+    "href": "workshops.html#workshop-02",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 02",
-    "text": "Workshop 02\nWorkshop 02 - R Bootcamp Part II",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 02\nWorkshop 02 - R Bootcamp Part II"
   },
   {
-    "objectID": "index.html#workshop-03",
-    "href": "index.html#workshop-03",
+    "objectID": "workshops.html#workshop-03",
+    "href": "workshops.html#workshop-03",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 03",
-    "text": "Workshop 03\nWorkshop 03 content has not been added yet.",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 03\nWorkshop 03 - Comparison of Means"
   },
   {
-    "objectID": "index.html#workshop-04",
-    "href": "index.html#workshop-04",
+    "objectID": "workshops.html#workshop-04",
+    "href": "workshops.html#workshop-04",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 04",
-    "text": "Workshop 04\nWorkshop 04 - Comparison of Means",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 04\nWorkshop 04 - Comparison of Means across Multiple Groups (ANOVA)"
   },
   {
-    "objectID": "index.html#workshop-05",
-    "href": "index.html#workshop-05",
+    "objectID": "workshops.html#workshop-05",
+    "href": "workshops.html#workshop-05",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 05",
-    "text": "Workshop 05\nWorkshop 05 - Comparison of Means across Multiple Groups (ANOVA)",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 05\nWorkshop 05 - Comparison of Prevalences"
   },
   {
-    "objectID": "index.html#workshop-06",
-    "href": "index.html#workshop-06",
+    "objectID": "workshops.html#workshop-06",
+    "href": "workshops.html#workshop-06",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 06",
-    "text": "Workshop 06\nWorkshop 06 - Comparison of Prevalences",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 06\nWorkshop 06 - Linear Regressions"
   },
   {
-    "objectID": "index.html#workshop-07",
-    "href": "index.html#workshop-07",
+    "objectID": "workshops.html#workshop-07",
+    "href": "workshops.html#workshop-07",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 07",
-    "text": "Workshop 07\nWorkshop 07 - Linear Regressions",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 07\nWorkshop 07 - Rates and Standardization (DOCX)"
   },
   {
-    "objectID": "index.html#workshop-08",
-    "href": "index.html#workshop-08",
+    "objectID": "workshops.html#workshop-08",
+    "href": "workshops.html#workshop-08",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 08",
-    "text": "Workshop 08\nWorkshop 08 - Rates and Standardization (DOCX)",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 08\nWorkshop 08 - Multivariate Models"
   },
   {
-    "objectID": "index.html#workshop-09",
-    "href": "index.html#workshop-09",
+    "objectID": "workshops.html#workshop-09",
+    "href": "workshops.html#workshop-09",
     "title": "VTPEH 6105 Workshops",
     "section": "Workshop 09",
-    "text": "Workshop 09\nWorkshop 09 - Multivariate Models",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#workshop-10",
-    "href": "index.html#workshop-10",
-    "title": "VTPEH 6105 Workshops",
-    "section": "Workshop 10",
-    "text": "Workshop 10\nWorkshop 10 - Logistic Regressions",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Workshop 09\nWorkshop 09 - Logistic Regressions"
   },
   {
     "objectID": "schedule.html",
@@ -242,6 +114,138 @@
     ]
   },
   {
+    "objectID": "6270/6270/index.html",
+    "href": "6270/6270/index.html",
+    "title": "VTPEH 6270: [Course Title Here]",
+    "section": "",
+    "text": "Welcome to the VTPEH 6270 course page.\nUse the sidebar to find information on lectures, assignments, and workshops.\n\n\nWrite the description for 6270 here. For example:\n\nLearn advanced methods in XYZ\nApply concepts to real public health problems\nWork on team projects and workshops\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nDay + Time + Room\n\n\nTerm\nFall\n\n\nWorkload\nX hours per week (homework, reading)",
+    "crumbs": [
+      "VTPEH 6270",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "6270/6270/index.html#course-description",
+    "href": "6270/6270/index.html#course-description",
+    "title": "VTPEH 6270: [Course Title Here]",
+    "section": "",
+    "text": "Write the description for 6270 here. For example:\n\nLearn advanced methods in XYZ\nApply concepts to real public health problems\nWork on team projects and workshops",
+    "crumbs": [
+      "VTPEH 6270",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "6270/6270/index.html#regular-weekly-schedule",
+    "href": "6270/6270/index.html#regular-weekly-schedule",
+    "title": "VTPEH 6270: [Course Title Here]",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nLectures\nDay + Time + Room\n\n\nTerm\nFall\n\n\nWorkload\nX hours per week (homework, reading)",
+    "crumbs": [
+      "VTPEH 6270",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/assignments.html",
+    "href": "6270/6270/6270/assignments.html",
+    "title": "VTPEH 6270 Assignments",
+    "section": "",
+    "text": "List your assignments here.\n\n\n\nTitle:\nDue date:\nDescription:\n\n\n\n\n\nTitle:\nDue date:\nDescription:\n\nAdd more sections as needed.",
+    "crumbs": [
+      "VTPEH 6270",
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/assignments.html#assignment-1",
+    "href": "6270/6270/6270/assignments.html#assignment-1",
+    "title": "VTPEH 6270 Assignments",
+    "section": "",
+    "text": "Title:\nDue date:\nDescription:",
+    "crumbs": [
+      "VTPEH 6270",
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/assignments.html#assignment-2",
+    "href": "6270/6270/6270/assignments.html#assignment-2",
+    "title": "VTPEH 6270 Assignments",
+    "section": "",
+    "text": "Title:\nDue date:\nDescription:\n\nAdd more sections as needed.",
+    "crumbs": [
+      "VTPEH 6270",
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/workshops.html",
+    "href": "6270/6270/6270/workshops.html",
+    "title": "VTPEH 6270 Workshops",
+    "section": "",
+    "text": "Use this page for workshop materials and links.\n\n\n\nTopic:\nSlides:\nR scripts / data:\n\n\n\n\n\nTopic:\nSlides:\nR scripts / data:",
+    "crumbs": [
+      "VTPEH 6270",
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/workshops.html#workshop-1",
+    "href": "6270/6270/6270/workshops.html#workshop-1",
+    "title": "VTPEH 6270 Workshops",
+    "section": "",
+    "text": "Topic:\nSlides:\nR scripts / data:",
+    "crumbs": [
+      "VTPEH 6270",
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/workshops.html#workshop-2",
+    "href": "6270/6270/6270/workshops.html#workshop-2",
+    "title": "VTPEH 6270 Workshops",
+    "section": "",
+    "text": "Topic:\nSlides:\nR scripts / data:",
+    "crumbs": [
+      "VTPEH 6270",
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Information",
+    "section": "",
+    "text": "Welcome to the course website. Use the sidebar to access the syllabus and class schedule.\n\n\nWrite your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets\n\n\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nFridays, 11:15-01:45 PM (one 2h30 session)\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week\n\n\nLocation\nLH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Course Information",
+    "section": "",
+    "text": "Write your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
+    "objectID": "index.html#regular-weekly-schedule",
+    "href": "index.html#regular-weekly-schedule",
+    "title": "Course Information",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nLectures\nFridays, 11:15-01:45 PM (one 2h30 session)\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week\n\n\nLocation\nLH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
+    "crumbs": [
+      "VTPEH 6105",
+      "Course Information"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus",
@@ -273,82 +277,5 @@
       "VTPEH 6105",
       "Syllabus"
     ]
-  },
-  {
-    "objectID": "workshops.html",
-    "href": "workshops.html",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "This page lists Workshops 1 through 10 for VTPEH 6105.\n\n\nWorkshop 01 - R Bootcamp Part I\n\n\n\nWorkshop 02 - R Bootcamp Part II\n\n\n\nWorkshop 03 content has not been added yet.\n\n\n\nWorkshop 04 - Comparison of Means\n\n\n\nWorkshop 05 - Comparison of Means across Multiple Groups (ANOVA)\n\n\n\nWorkshop 06 - Comparison of Prevalences\n\n\n\nWorkshop 07 - Linear Regressions\n\n\n\nWorkshop 08 - Rates and Standardization (DOCX)\n\n\n\nWorkshop 09 - Multivariate Models\n\n\n\nWorkshop 10 - Logistic Regressions"
-  },
-  {
-    "objectID": "workshops.html#workshop-01",
-    "href": "workshops.html#workshop-01",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 01 - R Bootcamp Part I"
-  },
-  {
-    "objectID": "workshops.html#workshop-02",
-    "href": "workshops.html#workshop-02",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 02 - R Bootcamp Part II"
-  },
-  {
-    "objectID": "workshops.html#workshop-03",
-    "href": "workshops.html#workshop-03",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 03 content has not been added yet."
-  },
-  {
-    "objectID": "workshops.html#workshop-04",
-    "href": "workshops.html#workshop-04",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 04 - Comparison of Means"
-  },
-  {
-    "objectID": "workshops.html#workshop-05",
-    "href": "workshops.html#workshop-05",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 05 - Comparison of Means across Multiple Groups (ANOVA)"
-  },
-  {
-    "objectID": "workshops.html#workshop-06",
-    "href": "workshops.html#workshop-06",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 06 - Comparison of Prevalences"
-  },
-  {
-    "objectID": "workshops.html#workshop-07",
-    "href": "workshops.html#workshop-07",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 07 - Linear Regressions"
-  },
-  {
-    "objectID": "workshops.html#workshop-08",
-    "href": "workshops.html#workshop-08",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 08 - Rates and Standardization (DOCX)"
-  },
-  {
-    "objectID": "workshops.html#workshop-09",
-    "href": "workshops.html#workshop-09",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 09 - Multivariate Models"
-  },
-  {
-    "objectID": "workshops.html#workshop-10",
-    "href": "workshops.html#workshop-10",
-    "title": "VTPEH 6105 Workshops",
-    "section": "",
-    "text": "Workshop 10 - Logistic Regressions"
   }
 ]

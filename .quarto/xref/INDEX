@@ -7,5 +7,35 @@
   },
   "syllabus.qmd": {
     "syllabus.html": "3b4537bd"
+  },
+  "6270/6270/6270/assignments.qmd": {
+    "assignments.html": "eadae012"
+  },
+  "6270/6270/6270/workshops.qmd": {
+    "workshops.html": "08c2e68d"
+  },
+  "6270/6270/index.qmd": {
+    "index.html": "5361761d"
+  },
+  "workshops.qmd": {
+    "workshops.html": "2506e66c"
+  },
+  "Workshops/Classes-selected/01-23 - Workshop 01 - R Bootcamp Part I/VTPEH6105-WS01-R-Bootcamp-Part-I.Rmd": {
+    "VTPEH6105-WS01-R-Bootcamp-Part-I.html": "687ed808"
+  },
+  "Workshops/Classes-selected/01-30 - Workshop 02 - R Bootcamp Part II/VTPEH6105-WS02-R-Bootcamp-Part-II.Rmd": {
+    "VTPEH6105-WS02-R-Bootcamp-Part-II.html": "2a1433a9"
+  },
+  "Workshops/Classes-selected/02-13 - Workshop 04 - Comparison of Means/VTPEH6105-WS04-Mean-Comparison.Rmd": {
+    "VTPEH6105-WS04-Mean-Comparison.html": "231fec8d"
+  },
+  "Workshops/Classes-selected (1)/02-20 - Workshop 05 - Comparison of Means across Multiple Groups/VTPEH6105-WS05-ANOVAs.Rmd": {
+    "VTPEH6105-WS05-ANOVAs.html": "35877000"
+  },
+  "Workshops/Classes-selected (1)/02-27 - Workshop 06 - Comparison of Prevalences/VTPEH6105-WS06-Comparison-of-Prevalences.Rmd": {
+    "VTPEH6105-WS06-Comparison-of-Prevalences.html": "f842842b"
+  },
+  "Workshops/Classes-selected (1)/03-06 - Workshop 07 - Linear Regressions/VTPEH6105-WS07-Linear-Regressions.Rmd": {
+    "VTPEH6105-WS07-Linear-Regressions.html": "c65aa175"
   }
 }

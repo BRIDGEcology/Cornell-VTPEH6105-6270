@@ -1,0 +1,316 @@
+---
+title: "Multivariate Models with R"
+author: "Amandine Gamble"
+date: "`r Sys.Date()`"
+editor_options:
+  chunk_output_type: console
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    number_sections: true
+  pdf_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+urlcolor: blue
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```
+
+# Loading Data
+
+We will use the *Palmer Penguin* data set available directly from the `palmerpenguins` package. You can learn more about the data at [allisonhorst.github.io/palmerpenguins](https://allisonhorst.github.io/palmerpenguins/). 
+
+Today, we will explore the variability in penguin weight.
+
+```{r, results='hide'}
+
+# install.packages("palmerpenguins")
+library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library(car)
+
+dat <- as.data.frame(penguins) # rename dataset
+str(dat) # structure of dataset
+
+```
+
+# Simple Multivariate Models
+
+Several explanatory variables can be included in regression models. 
+
+## Visualization
+
+```{r, results='hide'}
+
+ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+## Model
+
+```{r}
+
+# Fit model 
+mod = lm(body_mass_g ~ flipper_length_mm + sex + species,
+          data = dat)
+
+```
+
+## Assumptions
+
+```{r}
+
+#
+
+```
+
+## Inference
+
+```{r}
+
+# Return outputs (including p-value)
+summary(mod)
+
+```
+
+Interpretation...
+
+# More Complexe Multivariate Models
+
+Several explanatory variables can be included in regression models. 
+
+## Visualization
+
+```{r, results='hide'}
+
+ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+Let's focus on gentoo penguins
+
+## Subset
+
+```{r}
+
+dat_gep = subset(dat, species == "Gentoo")
+
+```
+
+## Assumptions part 1
+
+### Linearity
+
+```{r}
+
+library(GGally)
+
+ggpairs(dat_gep)
+
+```
+
+## Model
+
+```{r}
+
+# Fit model 
+mod = lm(body_mass_g ~ flipper_length_mm + sex + bill_length_mm + bill_depth_mm + year,
+          data = dat_gep)
+
+```
+
+## Assumptions part 2
+
+Collinearity
+
+```{r}
+
+# VIF
+
+vif(mod)
+
+```
+
+## Model Selection
+
+```{r}
+
+mod = lm(body_mass_g ~ flipper_length_mm,
+          data = dat_gep)
+
+summary(mod)
+
+mod = lm(body_mass_g ~ flipper_length_mm + sex,
+          data = dat_gep)
+
+summary(mod)
+
+mod = lm(body_mass_g ~ flipper_length_mm + sex + bill_length_mm,
+          data = dat_gep)
+
+summary(mod)
+
+mod = lm(body_mass_g ~ flipper_length_mm + sex + bill_length_mm + bill_depth_mm,
+          data = dat_gep)
+
+summary(mod)
+
+mod = lm(body_mass_g ~ flipper_length_mm + sex + bill_length_mm + year,
+          data = dat_gep)
+
+summary(mod)
+
+```
+
+Final model
+
+```{r}
+
+mod = lm(body_mass_g ~ flipper_length_mm + sex + bill_length_mm,
+          data = dat_gep)
+
+summary(mod)
+
+```
+
+## Assumptions part 3
+
+```{r}
+
+hist(mod$residuals)
+
+plot(mod)
+
+```
+
+## Inference
+
+```{r}
+
+# Return outputs (including p-value)
+summary(mod)
+
+```
+
+# Interactions
+
+Here we are looking at the association betwwen weight and 2 categorical variables: sex and species. 
+
+Several explanatory variables can be included in regression models. 
+
+## Visualization
+
+```{r, results='hide'}
+
+ggplot(dat, aes(x = flipper_length_mm, y = body_mass_g, color = sex, shape = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  scale_shape_manual(values = c(16, 17, 15),
+                     name = "Species") +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+Let's look at the effect of sex across species
+
+```{r, results='hide'}
+
+ggplot(subset(dat, !is.na(sex)), aes(x = species, y = body_mass_g, color = sex)) +
+  geom_boxplot() +
+  scale_color_manual(values = c("darkorange", "cyan4"), 
+                     name = "Sex", 
+                     labels = c("Female", "Male", "Unknown")) +
+  labs(
+    x = "Species",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal() 
+
+```
+
+## Model Selection
+
+```{r}
+
+mod = lm(body_mass_g ~ species,
+          data = dat)
+
+summary(mod)
+
+mod = lm(body_mass_g ~ species + sex,
+          data = dat)
+
+summary(mod)
+
+mod = lm(body_mass_g ~ species + sex + sex:species,
+          data = dat)
+
+summary(mod)
+
+```
+
+Final model
+
+```{r}
+
+mod = lm(body_mass_g ~ species + sex + sex:species,
+          data = dat)
+
+summary(mod)
+
+```
+
+## Assumptions
+
+```{r}
+
+hist(mod$residuals)
+
+plot(mod)
+
+```
+
+## Inference
+
+```{r}
+
+# Return outputs (including p-value)
+summary(mod)
+
+```

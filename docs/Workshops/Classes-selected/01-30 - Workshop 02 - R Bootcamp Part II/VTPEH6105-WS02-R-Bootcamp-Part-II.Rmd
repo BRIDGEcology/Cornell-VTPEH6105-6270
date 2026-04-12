@@ -1,0 +1,266 @@
+---
+title: "R Bootcamp - Part II"
+subtitle: "An Introduction to R Programming for Public Health Students"
+author: "Amandine Gamble <amandine.gamble@cornell.edu>"
+date: "`r Sys.Date()`"
+editor_options:
+  chunk_output_type: console
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    number_sections: true
+  pdf_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+urlcolor: blue
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```
+
+# Loading Data
+
+We will use the *Number of Reported Malaria Cases by County— United States, 2017* dataset available at [data.cdc.gov/Global-Health/Number-of-Reported-Malaria-Cases-by-County-United-/puzh-5wax/about_data](https://data.cdc.gov/Global-Health/Number-of-Reported-Malaria-Cases-by-County-United-/puzh-5wax/about_data). Download the CSV file onto your computer to be able to easily work with it. 
+
+```{r, results='hide'}
+
+# Load a CSV file
+data_malaria = read.csv(
+  "Data/Number_of_Reported_Malaria_Cases_by_County__United_States__2017_20250120.csv"
+  )
+# Notice the changes in the Environmental pane
+
+# Preview the data
+head(data_malaria)
+
+```
+
+# Exploring Data (continued)
+
+We can explore and summarize data with functions like `summary()`, `unique()`, `table()`, `aggregate()`...
+
+Data exploration helps understand the dataset structure and key statistics:
+
+```{r, results='hide'}
+
+# Example: Summary statistics
+summary(data_malaria)
+
+# Find unique values
+unique(data_malaria$STATE)
+
+# Create a contingency table
+table(data_malaria$STATE) # Number of observations by state
+
+# Aggregate scores by passing status
+aggregate(MAL_FREQ_2017 ~ STATE, data = data_malaria, FUN = sum)
+
+aggregate(MAL_FREQ_2017 ~ STATE, data = data_malaria, FUN = sd)
+
+```
+
+## Activity
+
+  - What does the `aggregate()` function do?
+  - Calculate the mean and standard deviation of malaria cases for each state.
+  - Create a new data frame containing the information of the number of cases by state. 
+  
+```{r, include = FALSE}
+
+# Insert answer here
+
+```
+
+# Subsetting Data
+
+Subsetting helps in extracting specific rows, columns, or elements. It can be done with logical tests (`>`, `<`, `==`, `is.na()`) and operators (`!`, `&`, `|`).
+
+```{r, results='hide'}
+
+# Select one element
+data_malaria[data_malaria$STATE == "COLORADO",  ]
+
+# Exclude one element
+data_malaria[data_malaria$STATE != "NEW YORK",  ]
+
+# Select values above a threshold
+data_malaria[data_malaria$MAL_FREQ_2017 > 10,  ]
+
+# Select rows respecting several conditions
+data_malaria[data_malaria$STATE == "NEW YORK" & data_malaria$MAL_FREQ_2017 > 10,  ]
+
+```
+
+## Activity
+
+  - What does the `data_malaria[data_malaria$MAL_FREQ_2017 > 10,  ]` command do?
+  - Decompose each element of this command:
+    - What does `data_malaria$MAL_FREQ_2017` do?
+    - What does `data_malaria$MAL_FREQ_2017 < 10` do?
+    - What does `data_malaria[...,  ]` do?
+  - Subset the data set for the data from Colorado only.
+  
+```{r, include = FALSE}
+
+# Insert answer here
+
+```
+
+  - What does the `data_malaria[data_malaria$STATE == "NEW YORK" | data_malaria$STATE == "CALIFORNIA",  ]` command do?
+  
+```{r, include = FALSE}
+
+# Insert answer here
+
+```
+
+# Creating New Variable
+
+New variables can be added to existing data frames with `$variable` or `df[ , "variable"]` (the same way existing variables are called). This is also a way to re-code variables (without erasing the original variable).
+
+```{r, results='hide'}
+
+# Create a new variable
+data_malaria$YEAR = 2017
+
+# Attribute values based on conditions
+data_malaria[data_malaria$MAL_FREQ_2017 <= 10, "MAL_FREQ_QUAL" ] = "LOW"
+data_malaria[data_malaria$MAL_FREQ_2017 > 10, "MAL_FREQ_QUAL" ] = "HIGH"
+
+```
+
+## Activity
+
+  - Re-code malaria frequency as low (10 or less), high (between 10 and 80), very high (80 or more).
+  
+```{r, include = FALSE}
+
+# Insert answer here
+
+```
+
+# Creating Data Frames from Scratch
+
+vectors can be created `c()`, and combined with `cbind()`, `rbind()`, or `data.frame()`. 
+
+```{r, results='hide'}
+
+# Counties
+COUNTY = data_malaria[data_malaria$STATE == "NEW YORK", "COUNTY"]
+length(COUNTY)
+
+# Create a new variable
+DATA_2018 = c(10, 12, 52, 36, 85, 85, 23, 12, 41, 120, 10, 22)
+# Or randomly select numbers
+DATA_2019 = sample(length(COUNTY)) 
+
+# Put the data in a data frame
+data_malaria_fictive = data.frame(COUNTY = COUNTY,
+                                  DATA_2018 = DATA_2018,
+                                  DATA_2019 = DATA_2019)
+
+```
+
+## Activity
+
+  - Add DATA_2020 to data_malaria_fictive.
+  
+```{r, include = FALSE}
+
+# Insert answer here
+
+```
+
+# Pivot 
+
+You can pivot tables for the wide to the long format and vice versa. 
+
+## Activity
+
+  - Pivot data_malaria_fictive from wide to long. You can use AI to help you. 
+  
+```{r, include = FALSE}
+
+# Insert answer here
+
+```
+
+# Solutions to the activities
+
+```{r, results='hide'}
+
+# Exploring Data ####
+
+# Calculate the mean and standard deviation of malaria cases for each state
+aggregate(MAL_FREQ_2017 ~ STATE, data_malaria, mean)
+aggregate(MAL_FREQ_2017 ~ STATE, data_malaria, sd)
+
+# Create a new data frame containing the information of the number of cases by state
+data_malaria_state = aggregate(MAL_FREQ_2017 ~ STATE, data_malaria, sum)
+
+# Subsetting Data ####
+
+# What does `data_malaria$MAL_FREQ_2017 > 10` do?
+data_malaria$MAL_FREQ_2017 > 10
+# Test for each county is the number of malaria case is above 10
+
+# What does `data_malaria[...,  ]` do?
+data_malaria[data_malaria$MAL_FREQ_2017 > 10, ]
+# Call the rows that verify the condition # cases > 10, and all the columns
+
+# Subset the data set for the data from Colorado only.
+data_malaria[data_malaria$STATE == "COLORADO", ]
+
+# Creating New Variables ####
+
+# Re-code malaria frequency as low (10 or less), high (between 10 and 80), very high (80 or more).
+data_malaria[data_malaria$MAL_FREQ_2017 <= 10, "MAL_FREQ_QUAL" ] = "LOW"
+data_malaria[data_malaria$MAL_FREQ_2017 > 10 & 
+               data_malaria$MAL_FREQ_2017 < 80, 
+             "MAL_FREQ_QUAL" ] = "HIGH"
+data_malaria[data_malaria$MAL_FREQ_2017 >= 80, "MAL_FREQ_QUAL" ] = "VERY HIGH"
+
+# Creating Data Frames from Scratch ####
+
+# Add DATA_2020 to data_malaria_fictive.
+data_malaria_fictive$DATA_2020 = sample(nrow(data_malaria_fictive))
+
+# Pivot ####
+
+# Pivot data_malaria_fictive from wide to long. You can use AI to help you. 
+# Indicate to AI:
+# - The language (R)
+# - The task (pivot from wide to long)
+# - The names of your variables (from colnames(data_malaria_fictive))
+# - Adjust the code (e.g., rename object if you need/want)
+# - Always check!
+
+colnames(data_malaria_fictive)
+
+# Prompt example: 
+# In R, I have a data frame with these variables: "COUNTY"    "DATA_2018" "DATA_2019" "DATA_2020"
+# I want to pivot it from wide to long
+
+library(tidyverse)
+
+# Pivot to long format
+data_malaria_fictive_long <- data_malaria_fictive %>%
+  pivot_longer(cols = starts_with("DATA_"), 
+               names_to = "year", 
+               values_to = "cases")
+
+# Clean up the year column (remove "DATA_" prefix)
+data_malaria_fictive_long <- data_malaria_fictive_long %>%
+  mutate(year = str_remove(year, "DATA_"))
+
+print(data_malaria_fictive_long)
+
+```
+
+The End.
