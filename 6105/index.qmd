@@ -22,4 +22,3 @@ Welcome to VTPEH 6105. Use the sidebar to access the combined syllabus and sched
 ## Quick Links
 
 - [Syllabus & Schedule](syllabus.qmd)
-- [All Workshops](#workshops) — see the schedule for individual sessions
