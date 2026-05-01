@@ -1,41 +1,20 @@
 ---
 title: "Cornell MPH Biostatistics"
 toc: false
-page-layout: full
 ---
 
-::: {.hero}
-# Welcome to the Cornell MPH Biostatistics website
-
-A central home for course materials, syllabi, schedules, and workshops for the Biostatistics curriculum in the Cornell Master of Public Health program.
-:::
+Welcome to the Cornell MPH Biostatistics website — a central home for course materials, syllabi, schedules, and workshops for the Biostatistics curriculum in the Cornell Master of Public Health program.
 
 ## Courses
 
-::: {.course-grid}
-
-::: {.course-card}
-### VTPEH 6105
-**Biostatistics for Health Sciences**
+### [VTPEH 6105 — Biostatistics for Health Sciences](6105/index.qmd)
 
 Core biostatistics concepts and applied data analysis in R for public health.
 
-[Go to course →](6105/index.qmd){.course-link}
-:::
-
-::: {.course-card}
-### VTPEH 6270
-**Advanced Biostatistics**
+### [VTPEH 6270 — Advanced Biostatistics](6270/6270/index.qmd)
 
 Continuation course covering advanced methods, multivariate models, and applied analyses.
 
-[Go to course →](6270/6270/index.qmd){.course-link}
-:::
-
-:::
-
 ---
 
-## About
-
-These pages are maintained for students enrolled in the Cornell MPH Biostatistics sequence. Use the sidebar to navigate within each course, where you'll find the syllabus, weekly schedule, and links to all workshop materials.
+*Use the sidebar to navigate within each course.*

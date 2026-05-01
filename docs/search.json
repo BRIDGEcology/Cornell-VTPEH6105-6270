@@ -201,7 +201,7 @@
     "href": "index.html",
     "title": "Cornell MPH Biostatistics",
     "section": "",
-    "text": "A central home for course materials, syllabi, schedules, and workshops for the Biostatistics curriculum in the Cornell Master of Public Health program.",
+    "text": "Welcome to the Cornell MPH Biostatistics website — a central home for course materials, syllabi, schedules, and workshops for the Biostatistics curriculum in the Cornell Master of Public Health program.",
     "crumbs": [
       "Home"
     ]
@@ -211,17 +211,7 @@
     "href": "index.html#courses",
     "title": "Cornell MPH Biostatistics",
     "section": "Courses",
-    "text": "Courses\n\n\nVTPEH 6105\nBiostatistics for Health Sciences\nCore biostatistics concepts and applied data analysis in R for public health.\nGo to course →\n\n\nVTPEH 6270\nAdvanced Biostatistics\nContinuation course covering advanced methods, multivariate models, and applied analyses.\nGo to course →",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Cornell MPH Biostatistics",
-    "section": "About",
-    "text": "About\nThese pages are maintained for students enrolled in the Cornell MPH Biostatistics sequence. Use the sidebar to navigate within each course, where you’ll find the syllabus, weekly schedule, and links to all workshop materials.",
+    "text": "Courses\n\nVTPEH 6105 — Biostatistics for Health Sciences\nCore biostatistics concepts and applied data analysis in R for public health.\n\n\nVTPEH 6270 — Advanced Biostatistics\nContinuation course covering advanced methods, multivariate models, and applied analyses.\n\nUse the sidebar to navigate within each course.",
     "crumbs": [
       "Home"
     ]
