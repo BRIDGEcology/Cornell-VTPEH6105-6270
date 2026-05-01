@@ -3,7 +3,7 @@ title: "Syllabus & Schedule"
 ---
 
 ::: {.callout-note appearance="simple"}
-**Full syllabus:** [Download the complete syllabus (PDF)](../files/vtpeh-6105-syllabus.pdf)
+**Full syllabus:** [Download the complete syllabus (PDF)](../files/VTPEH%206105%20-%20Syllabus.pdf)
 :::
 
 ## Grading
