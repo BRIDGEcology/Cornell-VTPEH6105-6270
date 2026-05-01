@@ -3,55 +3,55 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    - "6105/**/*.qmd"
     - "6270/**/*.qmd"
   resources:
     - Workshops/**
 
 website:
-  title: "Biostatistics for Health Sciences - VTPEH 6105 / 6270"
+  title: "Cornell MPH Biostatistics"
+  navbar:
+    background: primary
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "VTPEH 6105"
+        href: 6105/index.qmd
+      - text: "VTPEH 6270"
+        href: 6270/6270/index.qmd
   sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - section: "VTPEH 6105"
-        contents:
-          - text: "Course Information"
-            href: index.qmd
-          - text: "Syllabus"
-            href: syllabus.qmd
-          - text: "Class Schedule"
-            href: schedule.qmd
-          - section: "Workshops"
-            contents:
-              - text: "Workshop 01 - R Bootcamp Part I"
-                href: "Workshops/Classes-selected/01-23 - Workshop 01 - R Bootcamp Part I/VTPEH6105-WS01-R-Bootcamp-Part-I.pdf"
-              - text: "Workshop 02 - R Bootcamp Part II"
-                href: "Workshops/Classes-selected/01-30 - Workshop 02 - R Bootcamp Part II/VTPEH6105-WS02-R-Bootcamp-Part-II.pdf"
-              - text: "Workshop 03 - Comparison of Means"
-                href: "Workshops/Classes-selected/02-13 - Workshop 04 - Comparison of Means/VTPEH6105-WS04-Mean-Comparison.pdf"
-              - text: "Workshop 04 - Comparison of Means across Multiple Groups (ANOVA)"
-                href: "Workshops/Classes-selected (1)/02-20 - Workshop 05 - Comparison of Means across Multiple Groups/VTPEH6105-WS05-ANOVAs.pdf"
-              - text: "Workshop 05 - Comparison of Prevalences"
-                href: "Workshops/Classes-selected (1)/02-27 - Workshop 06 - Comparison of Prevalences/VTPEH6105-WS06-Comparison-of-Prevalences.pdf"
-              - text: "Workshop 06 - Linear Regressions"
-                href: "Workshops/Classes-selected (1)/03-06 - Workshop 07 - Linear Regressions/VTPEH6105-WS07-Linear-Regressions.pdf"
-              - text: "Workshop 07 - Rates and Standardization"
-                href: "Workshops/Classes-selected (1)/03-13 - Workshop 08 - Rates and Standardization/VTPEH6105 - Workshop 08 - Rates and Standardization.docx"
-              - text: "Workshop 08 - Multivariate Models"
-                href: "Workshops/Classes-selected (1)/03-20 - Workshop 09 - Multivariate Models/VTPEH6105-WS09-Multivariate-Model.html"
-              - text: "Workshop 09 - Logistic Regressions"
-                href: "Workshops/Classes-selected (1)/03-27 - Workshop 10 - Logistic Regressions/VTPEH6105-WS10-Logistic-Regressions.html"
-      - section: "VTPEH 6270"
-        contents:
-          - text: "Overview"
-            href: 6270/6270/index.qmd
-          - text: "Assignments"
-            href: 6270/6270/6270/assignments.qmd
-          - text: "Workshops"
-            href: 6270/6270/6270/workshops.qmd
+    - id: home
+      title: " "
+      style: "docked"
+      contents:
+        - text: "Home"
+          href: index.qmd
+    - id: vtpeh-6105
+      title: "VTPEH 6105"
+      style: "docked"
+      search: true
+      contents:
+        - text: "Course Information"
+          href: 6105/index.qmd
+        - text: "Syllabus & Schedule"
+          href: 6105/syllabus.qmd
+    - id: vtpeh-6270
+      title: "VTPEH 6270"
+      style: "docked"
+      search: true
+      contents:
+        - text: "Overview"
+          href: 6270/6270/index.qmd
+        - text: "Assignments"
+          href: 6270/6270/6270/assignments.qmd
+        - text: "Workshops"
+          href: 6270/6270/6270/workshops.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-location: right
+    code-copy: true
+    link-external-newwindow: true

@@ -1,24 +1,41 @@
 ---
-title: "Course Information"
+title: "Cornell MPH Biostatistics"
+toc: false
+page-layout: full
 ---
 
-# VTPEH 6105: Biostatistics for Health Sciences
+::: {.hero}
+# Welcome to the Cornell MPH Biostatistics website
 
-Welcome to the course website. Use the sidebar to access the syllabus and class schedule.
+A central home for course materials, syllabi, schedules, and workshops for the Biostatistics curriculum in the Cornell Master of Public Health program.
+:::
 
-## Course Description
+## Courses
 
-Write your course description here. For example:
+::: {.course-grid}
 
-- Introduce core biostatistics concepts
-- Learn R for data analysis
-- Apply methods to real public health datasets
+::: {.course-card}
+### VTPEH 6105
+**Biostatistics for Health Sciences**
 
-## Regular Weekly Schedule
+Core biostatistics concepts and applied data analysis in R for public health.
 
-| Item        | Details                         |
-|------------|----------------------------------|
-| Lectures   | Fridays, 11:15-01:45 PM (one 2h30 session) |
-| Term       | Spring Semester                  |
-| Workload   | 14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week |
-| Location   | LH3 (S2-223) or LH4 (S1-210) as indicated on Canvas |
+[Go to course →](6105/index.qmd){.course-link}
+:::
+
+::: {.course-card}
+### VTPEH 6270
+**Advanced Biostatistics**
+
+Continuation course covering advanced methods, multivariate models, and applied analyses.
+
+[Go to course →](6270/6270/index.qmd){.course-link}
+:::
+
+:::
+
+---
+
+## About
+
+These pages are maintained for students enrolled in the Cornell MPH Biostatistics sequence. Use the sidebar to navigate within each course, where you'll find the syllabus, weekly schedule, and links to all workshop materials.

@@ -1,0 +1,25 @@
+---
+title: "VTPEH 6105: Biostatistics for Health Sciences"
+---
+
+Welcome to VTPEH 6105. Use the sidebar to access the combined syllabus and schedule, or jump directly to a workshop.
+
+## Course Description
+
+- Introduce core biostatistics concepts
+- Learn R for data analysis
+- Apply methods to real public health datasets
+
+## Regular Weekly Schedule
+
+| Item       | Details                                                                                       |
+|------------|-----------------------------------------------------------------------------------------------|
+| Lectures   | Fridays, 11:15 AM – 1:45 PM (one 2h30 session)                                                |
+| Term       | Spring Semester                                                                               |
+| Workload   | 14 weeks of in-class lecture and practice (2h30/week); homework approximately 5 hours/week    |
+| Location   | LH3 (S2-223) or LH4 (S1-210), as indicated on Canvas                                          |
+
+## Quick Links
+
+- [Syllabus & Schedule](syllabus.qmd)
+- [All Workshops](#workshops) — see the schedule for individual sessions

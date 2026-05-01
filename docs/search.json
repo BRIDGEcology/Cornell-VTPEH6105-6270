@@ -114,69 +114,36 @@
     ]
   },
   {
-    "objectID": "6270/6270/index.html",
-    "href": "6270/6270/index.html",
-    "title": "VTPEH 6270: [Course Title Here]",
+    "objectID": "course-6105.html",
+    "href": "course-6105.html",
+    "title": "Course Information",
     "section": "",
-    "text": "Welcome to the VTPEH 6270 course page.\nUse the sidebar to find information on lectures, assignments, and workshops.\n\n\nWrite the description for 6270 here. For example:\n\nLearn advanced methods in XYZ\nApply concepts to real public health problems\nWork on team projects and workshops\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nDay + Time + Room\n\n\nTerm\nFall\n\n\nWorkload\nX hours per week (homework, reading)",
+    "text": "Welcome to the course website. Use the sidebar to access the syllabus and class schedule.\n\n\nWrite your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets\n\n\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nFridays, 11:15-01:45 PM (one 2h30 session)\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week\n\n\nLocation\nLH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
     "crumbs": [
-      "VTPEH 6270",
-      "Overview"
+      "VTPEH 6105",
+      "Course Information"
     ]
   },
   {
-    "objectID": "6270/6270/index.html#course-description",
-    "href": "6270/6270/index.html#course-description",
-    "title": "VTPEH 6270: [Course Title Here]",
+    "objectID": "course-6105.html#course-description",
+    "href": "course-6105.html#course-description",
+    "title": "Course Information",
     "section": "",
-    "text": "Write the description for 6270 here. For example:\n\nLearn advanced methods in XYZ\nApply concepts to real public health problems\nWork on team projects and workshops",
+    "text": "Write your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets",
     "crumbs": [
-      "VTPEH 6270",
-      "Overview"
+      "VTPEH 6105",
+      "Course Information"
     ]
   },
   {
-    "objectID": "6270/6270/index.html#regular-weekly-schedule",
-    "href": "6270/6270/index.html#regular-weekly-schedule",
-    "title": "VTPEH 6270: [Course Title Here]",
+    "objectID": "course-6105.html#regular-weekly-schedule",
+    "href": "course-6105.html#regular-weekly-schedule",
+    "title": "Course Information",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nLectures\nDay + Time + Room\n\n\nTerm\nFall\n\n\nWorkload\nX hours per week (homework, reading)",
+    "text": "Item\nDetails\n\n\n\n\nLectures\nFridays, 11:15-01:45 PM (one 2h30 session)\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week\n\n\nLocation\nLH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
     "crumbs": [
-      "VTPEH 6270",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "6270/6270/6270/assignments.html",
-    "href": "6270/6270/6270/assignments.html",
-    "title": "VTPEH 6270 Assignments",
-    "section": "",
-    "text": "List your assignments here.\n\n\n\nTitle:\nDue date:\nDescription:\n\n\n\n\n\nTitle:\nDue date:\nDescription:\n\nAdd more sections as needed.",
-    "crumbs": [
-      "VTPEH 6270",
-      "Assignments"
-    ]
-  },
-  {
-    "objectID": "6270/6270/6270/assignments.html#assignment-1",
-    "href": "6270/6270/6270/assignments.html#assignment-1",
-    "title": "VTPEH 6270 Assignments",
-    "section": "",
-    "text": "Title:\nDue date:\nDescription:",
-    "crumbs": [
-      "VTPEH 6270",
-      "Assignments"
-    ]
-  },
-  {
-    "objectID": "6270/6270/6270/assignments.html#assignment-2",
-    "href": "6270/6270/6270/assignments.html#assignment-2",
-    "title": "VTPEH 6270 Assignments",
-    "section": "",
-    "text": "Title:\nDue date:\nDescription:\n\nAdd more sections as needed.",
-    "crumbs": [
-      "VTPEH 6270",
-      "Assignments"
+      "VTPEH 6105",
+      "Course Information"
     ]
   },
   {
@@ -213,37 +180,77 @@
     ]
   },
   {
+    "objectID": "6270/6270/6270/assignments.html",
+    "href": "6270/6270/6270/assignments.html",
+    "title": "VTPEH 6270 Assignments",
+    "section": "",
+    "text": "List your assignments here.\n\n\n\nTitle:\nDue date:\nDescription:\n\n\n\n\n\nTitle:\nDue date:\nDescription:\n\nAdd more sections as needed.",
+    "crumbs": [
+      "VTPEH 6270",
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/assignments.html#assignment-1",
+    "href": "6270/6270/6270/assignments.html#assignment-1",
+    "title": "VTPEH 6270 Assignments",
+    "section": "",
+    "text": "Title:\nDue date:\nDescription:",
+    "crumbs": [
+      "VTPEH 6270",
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "6270/6270/6270/assignments.html#assignment-2",
+    "href": "6270/6270/6270/assignments.html#assignment-2",
+    "title": "VTPEH 6270 Assignments",
+    "section": "",
+    "text": "Title:\nDue date:\nDescription:\n\nAdd more sections as needed.",
+    "crumbs": [
+      "VTPEH 6270",
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "6270/6270/index.html",
+    "href": "6270/6270/index.html",
+    "title": "VTPEH 6270: [Course Title Here]",
+    "section": "",
+    "text": "Welcome to the VTPEH 6270 course page.\nUse the sidebar to find information on lectures, assignments, and workshops.\n\n\nWrite the description for 6270 here. For example:\n\nLearn advanced methods in XYZ\nApply concepts to real public health problems\nWork on team projects and workshops\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nDay + Time + Room\n\n\nTerm\nFall\n\n\nWorkload\nX hours per week (homework, reading)",
+    "crumbs": [
+      "VTPEH 6270",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "6270/6270/index.html#course-description",
+    "href": "6270/6270/index.html#course-description",
+    "title": "VTPEH 6270: [Course Title Here]",
+    "section": "",
+    "text": "Write the description for 6270 here. For example:\n\nLearn advanced methods in XYZ\nApply concepts to real public health problems\nWork on team projects and workshops",
+    "crumbs": [
+      "VTPEH 6270",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "6270/6270/index.html#regular-weekly-schedule",
+    "href": "6270/6270/index.html#regular-weekly-schedule",
+    "title": "VTPEH 6270: [Course Title Here]",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nLectures\nDay + Time + Room\n\n\nTerm\nFall\n\n\nWorkload\nX hours per week (homework, reading)",
+    "crumbs": [
+      "VTPEH 6270",
+      "Overview"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Course Information",
+    "title": "Cornell MPH Biostats",
     "section": "",
-    "text": "Welcome to the course website. Use the sidebar to access the syllabus and class schedule.\n\n\nWrite your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets\n\n\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nLectures\nFridays, 11:15-01:45 PM (one 2h30 session)\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week\n\n\nLocation\nLH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Course Information",
-    "section": "",
-    "text": "Write your course description here. For example:\n\nIntroduce core biostatistics concepts\nLearn R for data analysis\nApply methods to real public health datasets",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
-  },
-  {
-    "objectID": "index.html#regular-weekly-schedule",
-    "href": "index.html#regular-weekly-schedule",
-    "title": "Course Information",
-    "section": "",
-    "text": "Item\nDetails\n\n\n\n\nLectures\nFridays, 11:15-01:45 PM (one 2h30 session)\n\n\nTerm\nSpring Semester\n\n\nWorkload\n14 weeks with in-class lecture and practice sessions: 2h30 per week; homework: approximately 5 hours per week\n\n\nLocation\nLH3 (S2-223) or LH4 (S1-210) as indicated on Canvas",
-    "crumbs": [
-      "VTPEH 6105",
-      "Course Information"
-    ]
+    "text": "Welcome to Cornell MPH Biostatistics\n\n\n&lt;a href=\"course-6105.qmd\" class=\"course-link\"&gt;\n  &lt;div class=\"course-card\"&gt;\n    &lt;div class=\"course-card-inner\"&gt;\n      &lt;div class=\"course-front\"&gt;\n        &lt;div&gt;\n          VTPEH\n          &lt;span class=\"course-number\"&gt;6105&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"course-back\"&gt;\n        &lt;p&gt;&lt;strong&gt;Biostatistics for Health Sciences&lt;/strong&gt;&lt;/p&gt;\n        &lt;p style=\"font-size: 0.9em; margin-top: 10px;\"&gt;Introductory biostatistics with R programming&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/a&gt;\n\n&lt;a href=\"6270/6270/index.qmd\" class=\"course-link\"&gt;\n  &lt;div class=\"course-card\"&gt;\n    &lt;div class=\"course-card-inner\"&gt;\n      &lt;div class=\"course-front\"&gt;\n        &lt;div&gt;\n          VTPEH\n          &lt;span class=\"course-number\"&gt;6270&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"course-back\"&gt;\n        &lt;p&gt;&lt;strong&gt;Advanced Topics&lt;/strong&gt;&lt;/p&gt;\n        &lt;p style=\"font-size: 0.9em; margin-top: 10px;\"&gt;Advanced biostatistics methods&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/a&gt;"
   },
   {
     "objectID": "syllabus.html",
