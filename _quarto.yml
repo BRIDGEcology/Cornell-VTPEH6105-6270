@@ -7,6 +7,7 @@ project:
     - "6270/**/*.qmd"
   resources:
     - Workshops/**
+    - Lecture/**
 
 website:
   title: "Cornell MPH Biostatistics"
